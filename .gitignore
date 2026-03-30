@@ -3,6 +3,8 @@ target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+docs/randompot-current-status.md
+docs/randompot-deployment-status.md
 
 ### STS ###
 .apt_generated
