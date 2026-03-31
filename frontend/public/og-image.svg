@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="RandomPot Open Graph image">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111111" />
+      <stop offset="100%" stop-color="#2d2d2d" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="210" cy="315" r="92" fill="#ffffff" opacity="0.96" />
+  <circle cx="210" cy="253" r="16" fill="#111111" />
+  <circle cx="272" cy="315" r="16" fill="#111111" />
+  <circle cx="210" cy="377" r="16" fill="#111111" />
+  <circle cx="148" cy="315" r="16" fill="#111111" />
+  <text x="360" y="285" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="78" font-weight="700" fill="#ffffff">
+    RandomPot
+  </text>
+  <text x="360" y="360" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="34" fill="#e8e8e8">
+    \l/®Ñ/ ê¨© úd Ät D§
+  </text>
+</svg>

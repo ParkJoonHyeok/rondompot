@@ -1,29 +1,31 @@
-# 랜덤팟 (RandomPot)
+# RandomPot
 
-친구/모임/술자리/게임팟에서 사용할 수 있는 캐주얼 랜덤 놀이 웹서비스
+친구/모임/술자리/게임팟에서 바로 사용할 수 있는 캐주얼 랜덤 놀이 웹서비스입니다.  
+현재 상태는 **MVP 구현 및 배포 완료** 단계입니다.
+
+## 프로젝트 소개
+- 모임에서 빠르게 사용할 수 있는 랜덤 도구를 웹으로 제공
+- 프론트/백엔드 분리 구조로 운영 중
+- 배포 환경 기준으로 기본 UX/공유/운영 점검 항목까지 1차 반영 완료
 
 ## 주요 기능
 - **룰렛**: 입력한 항목 중 하나를 랜덤으로 선택
-- **벌칙 뽑기**: 간단한 벌칙 리스트에서 즉시 랜덤 추첨
-- **랜덤 미션**: 미션 후보를 넣고 한 개를 랜덤 선택
-- **팀나누기**: 참여자를 원하는 팀 수로 무작위 분배
+- **벌칙 뽑기**: 벌칙 후보 중 하나를 랜덤 추첨
+- **랜덤 미션**: 미션 후보 중 하나를 랜덤 선택
+- **팀나누기**: 참가자를 팀 수에 맞춰 무작위 분배
 
 ## 기술 스택
 - **Frontend**: Next.js, TypeScript
 - **Backend**: Spring Boot, Java
 - **Deployment**: Vercel, Render
 
-## 배포 주소
-- **프론트엔드**: [https://rondompot.vercel.app](https://rondompot.vercel.app)
-- **백엔드 헬스체크**: `https://<your-render-domain>.onrender.com/actuator/health`
-
-## 프로젝트 구조
-```text
-randompot-api/
-├─ frontend/                  # Next.js 프론트엔드
-├─ src/main/java/...          # Spring Boot 백엔드
-└─ docs/                      # 프로젝트 내부 문서
-```
+## 현재 반영된 UX/운영 포인트
+- 모바일 사용성 1차 개선 (입력/버튼/결과 영역 중심)
+- 결과 복사 / Web Share API 기반 공유
+- 페이지 링크 복사 (홈/기능 페이지)
+- 입력값 sessionStorage 복원
+- 최근 결과 히스토리 (추가/삭제/전체 비우기)
+- 기본 메타/OG/PWA/not-found/error/robots/sitemap 반영
 
 ## 실행 방법
 
@@ -37,7 +39,7 @@ Windows PowerShell:
 .\mvnw.cmd spring-boot:run
 ```
 
-기본 주소: `http://localhost:8080`
+- 기본 주소: `http://localhost:8080`
 
 ### 2) 프론트 실행
 ```bash
@@ -46,13 +48,26 @@ npm install
 npm run dev
 ```
 
-기본 주소: `http://localhost:3000`
+- 기본 주소: `http://localhost:3000`
 
-## 현재 상태
-- MVP 배포 완료
-- 룰렛/벌칙/미션/팀나누기 기본 기능 동작 확인 완료
+### 3) 환경변수 (프론트)
+- `NEXT_PUBLIC_SITE_URL`  
+  - 사이트 기준 URL (메타/OG/robots/sitemap 기준)
+  - 미설정 시 기본값: `https://randompot.vercel.app`
+- `NEXT_PUBLIC_API_BASE_URL`
+  - 프론트 API 호출 대상 백엔드 URL
+  - 미설정 시 기본값: `http://localhost:8080`
 
-## 향후 계획
-- 모바일 사용성 개선
-- 공유 기능
-- 세션 저장/히스토리
+## 배포 정보
+- **프론트엔드**: Vercel (`https://randompot.vercel.app`)
+- **백엔드**: Render (운영 Render 서비스 URL 기준)
+
+## 운영 문서
+- `docs/qa-checklist.md`
+- `docs/deployment-notes.md`
+- `docs/share-link-design-notes.md`
+
+## 추후 후보 (현재 미구현)
+- 고유 결과 공유 링크 고도화
+- 히스토리 UX 추가 개선
+- 모바일 UX 세부 보완
